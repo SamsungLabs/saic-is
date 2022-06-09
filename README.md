@@ -119,8 +119,11 @@ You can find model weights and evaluation results on the SAIC-IS dataset in the 
 |------------------------|---------------:|---------------:|
 | [HRNet18][hrnet18]     | 84.99$\pm$2.20 | 51.95$\pm$1.92 |
 | [Segformer][segformer] | 89.86$\pm$0.87 | 57.26$\pm$1.54 |
-[segformer]: todo
-[hrnet18]: todo
+
+[hrnet18]: https://github.com/SamsungLabs/saic-is/releases/download/v1.0/hrnet18_multi.pth
+[segformer]: https://github.com/SamsungLabs/saic-is/releases/download/v1.0/segformer_multi.pth
+
+To run the provided models, download and save them to the directory specified in the `EXPS_PATH` config field.
 
 ### Evaluation
 We provide a script to test all the presented models the SAIC-IS dataset.
@@ -130,17 +133,17 @@ Our scripts automatically detect the architecture of the loaded model.
 
 To compute IoU metrics for a model, run the following:
 ```.bash
-python3.8 scripts/evaluate_model.py NoBRS --gpus=0 --exp-path=segformer/cocolvis_segformer/000_exp:last --datasets=SAIC_IS --fixed-h=448 --fixed-w=448 --max-size=1000
+python3.8 scripts/evaluate_model.py NoBRS --gpus=0 --exp-path=segformer_multi.pth --datasets=SAIC_IS --fixed-h=448 --fixed-w=448 --max-size=1000
 ```
 
 To compute BoundaryIoU metrics for a model, run the following:
 ```.bash
-python3.8 scripts/evaluate_model.py NoBRS --gpus=0 --exp-path=segformer/cocolvis_segformer/000_exp:last --datasets=SAIC_IS --fixed-h=448 --fixed-w=448 --max-size=1000 --boundary-iou
+python3.8 scripts/evaluate_model.py NoBRS --gpus=0 --exp-path=segformer_multi.pth --datasets=SAIC_IS --fixed-h=448 --fixed-w=448 --max-size=1000 --boundary-iou
 ```
 
 To compute Number of Interactions @85, 90, 95 instead of [B]IoU averages, run the following:
 ```.bash
-python3.8 scripts/evaluate_model.py NoBRS --gpus=0 --exp-path=segformer/cocolvis_segformer/000_exp:last --datasets=GrabCut,Berkeley,DAVIS,SBD,PascalVOC,SAIC_IS --fixed-h=448 --fixed-w=448 --max-size=1000 [--boundary-iou] --noi
+python3.8 scripts/evaluate_model.py NoBRS --gpus=0 --exp-path=segformer_multi.pth --datasets=GrabCut,Berkeley,DAVIS,SBD,PascalVOC,SAIC_IS --fixed-h=448 --fixed-w=448 --max-size=1000 [--boundary-iou] --noi
 ```
 
 ## License
