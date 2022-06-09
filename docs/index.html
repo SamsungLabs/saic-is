@@ -34,6 +34,7 @@
   <!-- Custom styles for this template -->
   <link href="static/css/landing-page.min.css" rel="stylesheet">
 
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -100,7 +101,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-4">
+        <div class="col-3">
           <a href="https://drive.google.com/drive/folders/1HqKipCdYhEpA5XQ4JLfHCOn4_TJ8uaxs?usp=sharing" style="text-decoration : none;">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-1">
               <div class="features-icons-icon d-flex">
@@ -111,7 +112,18 @@
           </a>
         </div>
 
-        <div class="col-4">
+        <div class="col-3">
+          <a href="#license" style="text-decoration : none;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-1">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-file-text m-auto text-primary"></i>
+              </div>
+              <p class="mylead mb-0">License and privacy</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-3">
           <a href="https://drive.google.com/file/d/1V1zE-d_alTvywfWnYOG3SYKgcik4ZWca/view?usp=sharing" style="text-decoration : none;">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-1">
               <div class="features-icons-icon d-flex">
@@ -123,7 +135,7 @@
         </div>
 
 
-        <div class="col-4">
+        <div class="col-3">
           <a href="https://github.com/SamsungLabs/saic-is" style="text-decoration : none;">
             <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-1">
               <div class="features-icons-icon d-flex">
@@ -154,7 +166,7 @@
 
           <div class="content has-text-justified">
               <p class="lead mb-0" align="justify">
-              Interactive image segmentation is the core task in image editing. Existing interactive segmentation datasets contain images at a much lower resolution than the resolution of modern smartphone cameras. Hence, evaluation on such benchmarks may not represent the quality of interactive segmentation in real applications. Moreover, the standard evalution protocols shadow some crucial aspects of interactive segmentation. First, they use an IoU metric which we consider inadequate for high-resolution images, since it does not reflect the quality of segmented object boundaries. Second, evaluation protocols are deterministic; accordingly, they do not measure the robustness of interactive segmentation methods. In this paper, we propose SAIC-IS, a novel interactive segmentation benchmark containing 1000 high-resolution images. We also formulate a randomized evalution protocol more suitable for assessing both accuracy, including boundary accuracy, and robustness of high-resolution interactive segmentation.
+              Interactive image segmentation is the core task in image editing. Existing interactive segmentation datasets contain images at a much lower resolution than the resolution of modern smartphone cameras. Hence, evaluation on such benchmarks may not represent the quality of interactive segmentation in real applications. Moreover, the standard evalution protocols shadow some crucial aspects of interactive segmentation. First, they use an IoU metric which we consider inadequate for high-resolution images, since it only measures general segmentation quality yet does not reflect the quality of segmented object boundaries. Second, evaluation protocols are deterministic; accordingly, they do not measure the robustness of interactive segmentation methods. In this paper, we propose SAIC-IS, a novel interactive segmentation benchmark containing 1000 high-resolution images and introduce a randomized evaluation protocol. We describe a procedure of simulating user input in form of clicks, strokes, and contours, and formulate two metrics measuring the quality, including the boundary quality, and the robustness of high-resolution interactive segmentation methods w.r.t. different interaction types.
             </p>
 
         </div>
@@ -169,6 +181,33 @@
       </div>
     </div>
   </div>
+
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="is-centered">
+
+        <div class="content  is-centered has-text-centered">
+            <a name="license"></a>
+          <h1 class="title is-2">License</h1>
+        </div>
+
+
+        <div class="content has-text-justified">
+            <p class="lead mb-0" align="justify">
+            Images are under <a href='https://unsplash.com/license'>Unsplash</a> license,
+            segmentation masks are under <a href='https://creativecommons.org/licenses/by-nc/4.0/'>CC BY-NC 4.0</a> license.
+            The dataset contains no humans and no personal information.
+          </p>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 </section>
 <section class="content">
