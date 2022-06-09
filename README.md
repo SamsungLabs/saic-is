@@ -1,7 +1,7 @@
 # SAIC-IS: A Benchmark for High Resolution Interactive Image Segmentation
 This repository provides the official PyTorch implementation for training and testing of interactive segmentation models presented the following paper:
 > SAIC-IS: A Benchmark for High Resolution Interactive Image Segmentation
-> 
+>
 > Samsung AI Center Moscow
 
 ## Setting up an environment
@@ -12,7 +12,7 @@ The following command installs all necessary packages:
 pip3 install -r requirements.txt
 ```
 
-You can also use our [Dockerfile](./Dockerfile) to build a container with configured environment. 
+You can also use our [Dockerfile](./Dockerfile) to build a container with configured environment.
 
 If you want to run training or testing, you must rename [config.yml.default](./config.yml.default) to `config.yml` and configure paths in [config.yml](./config.yml).
 
@@ -28,7 +28,7 @@ All our models are evaluated on the following datasets:
 | SBD            |          2857 |             6671 |                   0.2 |
 | PASCAL VOC     |          1449 |             3417 |                   0.2 |
 | DAVIS          |           345 |              345 |                   0.4 |
-| SAIC_IS (ours) |          1000 |             1553 |                    17 |
+| SAIC-IS (ours) |          1000 |             1553 |                    17 |
 
 Don't forget to change paths to the datasets in [config.yml](./config.yml) after downloading and unpacking.
 
@@ -51,7 +51,7 @@ python3 demo.py --checkpoint=exp.pth --cpu --fixed-h 448 --fixed-w 448
 
 ### Controls
 * press left and right mouse buttons for positive and negative interactions, respectively
-* press space to finish annotation of an area 
+* press space to finish annotation of an area
 
 ### Interactive segmentation options
 * Interaction type choice
@@ -112,12 +112,12 @@ You can specify another path in the [config.yml](./config.yml) (see `EXPS_PATH` 
 
 To train a Segformer-based multi-input model, run the following:
 ```.bash
-python3.8 train.py models/segformer/segformer_cocolvis_itermask_multi_input.py --gpus=0,1,2,3 --workers=8 --exp-name=exp 
+python3.8 train.py models/segformer/segformer_cocolvis_itermask_multi_input.py --gpus=0,1,2,3 --workers=8 --exp-name=exp
 ```
 
 To train an HRNet-based multi-input model, run the following:
 ```.bash
-python3.8 train.py models/hrnet/hrnet18_cocolvis_itermask_multi_input.py --gpus=0,1 --workers=8 --exp-name=exp 
+python3.8 train.py models/hrnet/hrnet18_cocolvis_itermask_multi_input.py --gpus=0,1 --workers=8 --exp-name=exp
 ```
 
 We used pre-trained HRNetV2 models from the [HRNet official repository](https://github.com/HRNet/HRNet-Image-Classification)
@@ -143,7 +143,7 @@ We provide descriptions for its fields further.
   * `PRETRAINED_PATH`: use pre-trained weights for training
   * `CONTOUR_FILLED`: if contour should be encoded as a binary mask of a contour's line or a contour's filled mask
 * `SEGFORMER`:
-  * `WITH_AUX_HEAD`: if Segformer should be trained with BCE loss on an intermediate auxiliary output 
+  * `WITH_AUX_HEAD`: if Segformer should be trained with BCE loss on an intermediate auxiliary output
   * `LR_TYPE`: learning rate schedule type for Segformer training, available options: "linear", "cosine", "step"
 
 ## License
