@@ -82,7 +82,7 @@ You can find model weights and evaluation results on the SAIC-IS dataset in the 
 [hrnet18]: https://github.com/SamsungLabs/saic-is/releases/download/v1.0/hrnet18_multi.pth
 [segformer]: https://github.com/SamsungLabs/saic-is/releases/download/v1.0/segformer_multi.pth
 
-To run the provided models, download and save them to the directory specified in the `EXPS_PATH` config field.
+To run the provided models, download and save the checkpoints to a directory specified in the `EXPS_PATH` config field.
 
 ### Evaluation
 We provide a script to test all the presented models the SAIC-IS dataset.
