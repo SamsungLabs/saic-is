@@ -1,0 +1,40 @@
+INTERACTIVE_MODELS_PATH: "./weights"
+EXPS_PATH: "./experiments"
+
+# Evaluation datasets
+GRABCUT_PATH: "./datasets/GrabCut"
+BERKELEY_PATH: "./datasets/Berkeley"
+DAVIS_PATH: "./datasets/DAVIS"
+SBD_PATH: "./datasets/SBD"
+SAIC_IS_PATH: "./datasets/saic_is"
+
+# Train datasets
+COCO_PATH: "./datasets/coco2017"
+LVIS_PATH: "./datasets/LVIS"
+LVIS_v1_PATH: "./datasets/LVISv1"
+PASCALVOC_PATH: "./datasets/VOC2012"
+
+# You can download the weights for HRNet from the repository:
+# https://github.com/HRNet/HRNet-Image-Classification
+IMAGENET_PRETRAINED_MODELS:
+  HRNETV2_W18: "./pretrained_models/hrnetv2_w18_imagenet_pretrained.pth"
+  HRNETV2_W32: "./pretrained_models/hrnetv2_w32_imagenet_pretrained.pth"
+  HRNETV2_W40: "./pretrained_models/hrnetv2_w40_imagenet_pretrained.pth"
+  HRNETV2_W48: "./pretrained_models/hrnetv2_w48_imagenet_pretrained.pth"
+  MIT_B1: "./pretrained_models/mit_b1.pth"
+  MIT_B4: "./pretrained_models/mit_b4.pth"
+  MIT_B5: "./pretrained_models/mit_b5.pth"
+
+MODEL:
+  WITH_FORCE_POINTS_LOSS: True
+  OPTIMIZER_TYPE: "adamw" # sgd adam adamw
+  BATCH_SIZE: 32  # default 32
+  TRAIN_SIZE: 448  # default 448
+  INPUT_TYPE: "point" # point contour stroke
+  ACCUMULATE_MULTI_INPUT: True
+  PRETRAINED_PATH: ""
+  CONTOUR_FILLED: True
+
+SEGFORMER:
+  WITH_AUX_HEAD: False
+  LR_TYPE: "linear" # cosine linear step
