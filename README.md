@@ -1,6 +1,6 @@
-# A Benchmark for High Resolution Interactive Image Segmentation
+# SAIC-IS: A Benchmark for High Resolution Interactive Image Segmentation
 This repository provides the official PyTorch implementation for training and testing of interactive segmentation models presented the following paper:
-> A Benchmark for High Resolution Interactive Image Segmentation
+> SAIC-IS: A Benchmark for High Resolution Interactive Image Segmentation
 > 
 > Samsung AI Center Moscow
 
