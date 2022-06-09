@@ -151,12 +151,12 @@
   </div>
 
 </section>
-  <section class="content">
-
+<section class="content">
     <div class="is-centered">
       <div class="content  is-centered has-text-centered">
-        <h2 class="title is-2">Baseline methods</h2>
+        <h2 class="title is-2">Baseline multi-input methods</h2>
       </div>
+      <br>
       <div>
         <center>
           <div class="row">
@@ -165,17 +165,41 @@
             </div>
           </div>
       </div>
+    </div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="is-centered">
 
-      <br>
-      <br>
+        <div class="content has-text-justified">
+            <p class="lead mb-0" align="justify">
+            Our interactive segmentation pipeline consists of three parts: an
+            interaction simulation module, an interactive branch, and a backbone.
+            Three interaction types (click, stroke, contour) are generated given
+            ground truth masks of mislabelled regions, with an initial object mask as
+            the first mislabelled region. Model accepts 6-channel binary map encoding
+            positive and negative interactions for each of three interaction types.
+            We train and evaluate models with a convolutional HRNet18+OCR and a
+            transformer-based Segformer backbone.
+          </p>
+
       </div>
-          <div class="content has-text-centered">
-              <img src="static/images/peaches.gif" width='40%'>
-              <img src="static/images/cows.gif" width='40%'>
-          </div>
-          <br><br>
+    </div>
+  </div>
+</div>
 
-        </section>
+        <br>
+        <br>
+            <div class="content has-text-centered">
+                <img src="static/images/peaches.gif" width='40%'>
+                <img src="static/images/cows.gif" width='40%'>
+            </div>
+            <br><br>
+</section>
+
+
+
 
 
   <!--
