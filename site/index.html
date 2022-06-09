@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <title>SAIC-IS: A Benchmark for High-Resolution Interactive Image Segmentation</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="static/css/landing-page.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <!-- Masthead -->
+  <header class="masthead text-center bg-light">
+  <div class="overlay"></div>
+    <div class="container">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+          <h1 class="title is-1 publication-title">SAIC-IS: A Benchmark for High-Resolution Interactive Image Segmentation</h1>
+    </div>
+  </div>
+  </div>
+  </header>
+
+
+  <section class="testimonials text-center bg-light">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="is-size-5 publication-authors">
+          <span class="author-block">
+              Vlad Shakhuro,
+          </span>
+          <span class="author-block">
+               Polina Popenova,
+          </span>
+          <span class="author-block">
+               Anna Vorontsova,
+          </span>
+          <span class="author-block">
+               Anton Konushin
+          </span>
+
+        </div>
+
+        <br>
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><a href="https://research.samsung.com/aicenter_moscow">Samsung AI Center, Moscow</a></span><br>
+          <br>
+        </div>
+
+
+        <!--<div class="is-size-4 publication-authors">
+            CONF
+        </div>-->
+
+  </section>
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-4 offset-2">
+          <a href="" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-1">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-database m-auto text-primary"></i>
+              </div>
+              <p class="mylead mb-0">Info</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-4">
+          <a href="https://github.com/SamsungLabs/saic-is" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-1">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-github m-auto text-primary"></i>
+              </div>
+              <h5>Code (metrics and baselines)</h5>
+            </div>
+          </a>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="is-centered">
+
+          <div class="content  is-centered has-text-centered">
+            <h2 class="title is-3">Abstract</h2>
+          </div>
+
+
+          <div class="content has-text-justified">
+              <p class="lead mb-0" align="justify">
+              Interactive image segmentation is the core task in image editing. Existing interactive segmentation datasets contain images at a much lower resolution than the resolution of modern smartphone cameras. Hence, evaluation on such benchmarks may not represent the quality of interactive segmentation in real applications. Moreover, the standard evalution protocols shadow some crucial aspects of interactive segmentation. First, they use an IoU metric which we consider inadequate for high-resolution images, since it does not reflect the quality of segmented object boundaries. Second, evaluation protocols are deterministic; accordingly, they do not measure the robustness of interactive segmentation methods. In this paper, we propose SAIC-IS, a novel interactive segmentation benchmark containing 1000 high-resolution images. We also formulate a randomized evalution protocol more suitable for assessing both accuracy, including boundary accuracy, and robustness of high-resolution interactive segmentation.
+            </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+  <section class="content">
+
+    <div class="is-centered">
+      <div class="content  is-centered has-text-centered">
+        <h2 class="title is-2">Baseline methods</h2>
+      </div>
+      <div>
+        <center>
+          <div class="row">
+            <div class="offset-lg-2 col-lg-8 text-white">
+              <img class="img-fluid mb-3" src="static/images/method_scheme.png" alt="" width='80%'>
+            </div>
+          </div>
+      </div>
+
+      <br>
+      <br>
+      </div>
+          <div class="content has-text-centered">
+              <img src="static/images/peaches.gif" width='40%'>
+              <img src="static/images/cows.gif" width='40%'>
+          </div>
+          <br><br>
+
+        </section>
+
+
+  <!--
+  <section class="section" id="BibTeX">
+    <div class="container content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+    </code></pre>
+    </div>
+  </section>-->
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+          This website is based on&nbsp;<a href="https://nerfies.github.io">nerfies</a>.
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
